@@ -1,6 +1,6 @@
-# Monte Carlo Simulation Infrastructure with Azure Containers
+# Containerised TOPAS Simulation
 
-Welcome to the Monte Carlo Simulation Infrastructure project utilizing Azure Containers. This repository contains the setup instructions and information on running simulations using containerized Topas 3.9 on the latest Ubuntu image in an Azure environment.
+This repository contains the setup instructions and information on running simulations using containerized Topas 3.9 on the latest Ubuntu image in both a local host machine and an Azure environment.
 
 ## Local Container Setup
 
