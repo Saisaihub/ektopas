@@ -8,7 +8,7 @@ For running the simulation locally, you can use Docker to containerize Topas 3.9
 
 ## Azure Container Setup (in-progress)
 
-To build an infrastructure on Azure for more scalable simulations, follow the setup guide in [AzureContainer/AzureSetup.md](AzureContainer/AzureSetup.md). This section will guide you through the process of deploying and managing simulations in an Azure container environment.
+To build an infrastructure on Azure for more scalable simulations, follow the setup guide in [AzureContainer](./AzureContainer). This section will guide you through the process of deploying and managing simulations in an Azure container environment.
 
 ## Useful Links
 
