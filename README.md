@@ -4,7 +4,7 @@ Welcome to the Monte Carlo Simulation Infrastructure project utilizing Azure Con
 
 ## Local Container Setup
 
-For running the simulation locally, you can use Docker to containerize Topas 3.9 with the latest Ubuntu image. Detailed instructions can be found in [LocalContainer/containerSetup.md](LocalContainer).
+For running the simulation locally, you can use Docker to containerize Topas 3.9 with the latest Ubuntu image. Detailed instructions can be found in [LocalContainer](LocalContainer).
 
 ## Azure Container Setup (in-progress)
 
@@ -23,3 +23,4 @@ Feel free to reach out if you have any questions or need further assistance with
 ---
 
 **Note:** This project is maintained by Sai Ma, the LINAC physicist at Elekta, residing in Crawley, UK.
+
