@@ -5,5 +5,5 @@ git init
 git add .
 git commit -m "latest update"
 git remote set-url origin git@github.com:Saisaihub/ektopas.git
-git push -f origin main
+git push -u origin main
 pause
