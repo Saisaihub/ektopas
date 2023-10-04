@@ -5,8 +5,11 @@
 Before you get started, ensure you have the following prerequisites in place:
 
 - [Docker](https://docs.docker.com/get-docker/) installed on your system.
+
 - Downloaded the Topas installation file from [Topas Download Page(v3.9)](https://www.topasmc.org/download).
+
 - Obtained the necessary Geant4 datasets files [Geant4 Download Page(v10.7.1)](https://geant4.web.cern.ch/download/10.7.1.html).
+
   *Topas3.9 is based on Geant4 v10.7.1, you need to download the relevant version*
 
 ## Procedure
