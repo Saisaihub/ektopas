@@ -1,22 +1,39 @@
 # Use the latest Ubuntu image as the base image
 FROM ubuntu:latest
-# Copy the topas installation file to the /home directory in the container
-COPY topas_3_9_debian9.tar.gz /home/
+
 # Update the package list and install sudo
 RUN apt-get update && apt-get -y install sudo
+
 # Update the package list and install required packages with sudo privileges
 RUN sudo apt update && \
     sudo apt install -y libexpat1-dev libgl1-mesa-dev libglu1-mesa-dev libxt-dev xorg-dev build-essential libharfbuzz-dev && \
     sudo rm -rf /var/lib/apt/lists/*
+
+# Copy all part files to the /home/ directory in the container
+COPY topas_3_9_debian9.tar.gz.part* /home/
+
+# Combine all part files into a single tar.gz file
+RUN cat /home/topas_3_9_debian9.tar.gz.part* > /home/topas_3_9_debian9.tar.gz
+
 # Extract topas_3_9_debian9.tar.gz in the /home directory
 RUN tar -zxvf /home/topas_3_9_debian9.tar.gz -C /home/
+
 # Create G4Data and IOTempDir folders in the /home directory
 RUN mkdir /home/G4Data /home/IOTempDir
+
 # Remove the /home/topas_3_9_debian9.tar.gz file
 RUN rm /home/topas_3_9_debian9.tar.gz
+
 # Set the working directory to /home/IOTempDir
 WORKDIR /home/IOTempDir
-# If you want a lite version of image without the G4Data, please delete the commands below
+
+# If you want a lite version of image without the G4Data, please comment the commands below
 # Copy all .tar.gz files from the host to /home/G4Data in the container
-COPY *.tar.gz /home/G4Data/
-# Extract all .tar.gz files in /home/G4Data
+#COPY G4Data/*.tar.gz /home/G4Data/
+
+# Extract all .tar.gz files in /home/G4Data and remove the original tar.gz files
+#RUN cd /home/G4Data/ && \
+#    for file in *.tar.gz; do \
+#        tar -zxvf "$file" && \
+#        rm "$file"; \
+#    done

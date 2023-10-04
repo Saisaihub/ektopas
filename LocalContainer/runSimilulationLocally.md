@@ -15,6 +15,6 @@ docker run --rm --volume="C:/TopasHostIO:/home/IOTempDir" --env="TOPAS_G4_DATA_D
 For the lite image ektsysphys/ektopaslite:
 
 ```bash
-docker run --rm --volume="C:/TopasHostIO:/home/IOTempDir" --volume="C:/G4Data:/home/G4Data" --env="TOPAS_G4_DATA_DIR=/home/G4Data" --entrypoint="/home/topas/bin/topas" ektsysphys/ektopaslite:latest /home/IOTempDir/inputexample.txt
+docker run --rm --volume="D:/topastest/TopasHostIO:/home/IOTempDir" --volume="D:/topastest/G4Data:/home/G4Data" --env="TOPAS_G4_DATA_DIR=/home/G4Data" --entrypoint="/home/topas/bin/topas" ektopaslite /home/IOTempDir/inputexample.txt
 ```
 
