@@ -5,14 +5,15 @@
 Before you get started, ensure you have the following prerequisites in place:
 
 - [Docker](https://docs.docker.com/get-docker/) installed on your system.
-- Downloaded the Topas installation file from [Topas Download Page](https://www.topasmc.org/download).
-- Obtained the necessary Geant4 datasets files [Geant4 Download Page](https://geant4.web.cern.ch/download/11.1.2.html).
+- Downloaded the Topas installation file from [Topas Download Page(v3.9)](https://www.topasmc.org/download).
+- Obtained the necessary Geant4 datasets files [Geant4 Download Page(v10.7.1)](https://geant4.web.cern.ch/download/10.7.1.html).
+  *Topas3.9 is based on Geant4 v10.7.1, you need to download the relevant version*
 
 ## Procedure
 
 1. Begin by creating a new folder for your simulation project, let's call it `[Your Simulation]`.
 
-   a. Copy the [Dockerfile](Dockerfile), without extension, from this repository into the `[Your Simulation]` folder.
+   a. Copy the [Dockerfile-full](Dockerfile-full) or [Dockerfile-lite](Dockerfile-lite), renamed to **Dockerfile** without extension , from this repository into the `[Your Simulation]` folder.
 
    b. Inside `[Your Simulation]`, create a new directory named `TopasHostIO`. This directory will facilitate data sharing between the host machine and containers.
 

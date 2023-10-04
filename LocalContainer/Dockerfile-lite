@@ -29,11 +29,11 @@ WORKDIR /home/IOTempDir
 
 # If you want a lite version of image without the G4Data, please comment the commands below
 # Copy all .tar.gz files from the host to /home/G4Data in the container
-COPY *.tar.gz /home/G4Data/
+#COPY G4Data/*.tar.gz /home/G4Data/
 
 # Extract all .tar.gz files in /home/G4Data and remove the original tar.gz files
-RUN cd /home/G4Data/ && \
-    for file in *.tar.gz; do \
-        tar -zxvf "$file" && \
-        rm "$file"; \
-    done
+#RUN cd /home/G4Data/ && \
+#    for file in *.tar.gz; do \
+#        tar -zxvf "$file" && \
+#        rm "$file"; \
+#    done
