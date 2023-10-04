@@ -2,11 +2,13 @@
 
 This repository contains the setup instructions and information on running simulations using containerized Topas 3.9 on the latest Ubuntu image in both a local host machine and an Azure environment.
 
-## Local Container Setup
+I suggest trying the Topas container on your local PC first. If you like it, then proceed to the next section.
+
+## Local Topas Container 
 
 For running the simulation locally, you can use Docker to containerize Topas 3.9 with the latest Ubuntu image. Detailed instructions can be found in [LocalContainer](LocalContainer).
 
-## Azure Container Setup (in-progress)
+## Azure Topas Container (in-progress)
 
 To build an infrastructure on Azure for more scalable simulations, follow the setup guide in [AzureContainer](./AzureContainer). This section will guide you through the process of deploying and managing simulations in an Azure container environment.
 
