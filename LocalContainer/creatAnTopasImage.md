@@ -16,7 +16,7 @@ Before you get started, ensure you have the following prerequisites in place:
 
 1. Begin by creating a new folder for your simulation project, let's call it `[Your Simulation]`.
 
-   a. Copy the [Dockerfile-full](Dockerfile-full) or [Dockerfile-lite](Dockerfile-lite), rename it as **Dockerfile** without extension , from this repository into the `[Your Simulation]` folder.
+   a. Copy the [Dockerfile-full](Dockerfile-full) or [Dockerfile-lite](Dockerfile-lite) from this repository into the `[Your Simulation]` folder, rename it as **Dockerfile** without extension.
 
    b. Inside `[Your Simulation]`, create a new directory named `TopasHostIO`. This directory will facilitate data sharing between the host machine and containers.
 
