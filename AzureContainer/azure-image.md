@@ -62,3 +62,7 @@
    Image can be found from Azure Portal if pushed successfully
 
 <img src="./assets/image-20231003173914178.png" alt="image-20231003173914178" style="zoom:50%;" />
+
+5. Enable the admin user to get access to this image when creating a container.
+
+<img src="./assets/image-20231004132520690.png" alt="image-20231004132520690" style="zoom:50%;" />
