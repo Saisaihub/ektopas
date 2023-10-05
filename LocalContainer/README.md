@@ -4,4 +4,4 @@ This guide will walk you through setting up a Docker container with the latest U
 
 Firstly, you need to [create an image](creatAnTopasImage.md), this is the mother of all container instances to be run in the future
 
-Then, you can run your simulation with simple steps by following [Run simulation locally](runSimulationLocally.md). 
+Then, you can run your simulation with simple steps by following [Run simulation locally](runSimilulationLocally.md). 
