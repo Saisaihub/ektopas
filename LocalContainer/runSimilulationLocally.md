@@ -7,7 +7,7 @@ Download and copy [inputexample.txt](inputexample.txt) into the folder ‘TopasH
 For the Full image ektsysphys/ektopas:
 
 ```bash
-docker run --rm --volume="C:/TopasHostIO:/home/IOTempDir" --env="TOPAS_G4_DATA_DIR=/home/G4Data" --entrypoint="/home/topas/bin/topas" ektsysphys/ektopas:latest /home/IOTempDir/inputexample.txt
+docker run --rm --volume="$(pwd)/TopasHostIO:/home/IOTempDir" ektopasfull.azurecr.io/ektopasfull:latest /home/IOTempDir/inputexample.txt
 ```
 
 ---
@@ -15,6 +15,5 @@ docker run --rm --volume="C:/TopasHostIO:/home/IOTempDir" --env="TOPAS_G4_DATA_D
 For the lite image ektsysphys/ektopaslite:
 
 ```bash
-docker run --rm --volume="D:/topastest/TopasHostIO:/home/IOTempDir" --volume="D:/topastest/G4Data:/home/G4Data" --env="TOPAS_G4_DATA_DIR=/home/G4Data" --entrypoint="/home/topas/bin/topas" ektopaslite /home/IOTempDir/inputexample.txt
+docker run --rm --volume="$(pwd)/TopasHostIO:/home/IOTempDir" --volume="$(pwd)/G4Data:/home/G4Data" ektopaslite.azurecr.io/ektopaslite:latest /home/IOTempDir/inputexample.txt
 ```
-

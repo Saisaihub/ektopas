@@ -1,1 +1,41 @@
+```yaml
+apiVersion: '2018-10-01'
+location: uksouth
+name: topasrungroup
+properties:
+  containers:
+  - name: mytopasrun
+    properties:
+      image: ektopaslite.azurecr.io/ektopaslite:latest
+      resources:
+        requests:
+          cpu: 4
+          memoryInGB: 16
+      volumeMounts:
+        - name: topastorage-io
+          mountPath: /home/IOTempDir
+        - name: topastorage-g4data
+          mountPath: /home/G4Data
+      command: ["/bin/sh", "-c", "/home/topas/bin/topas inputexample.txt"]
+  osType: Linux
+  restartPolicy: Always
+  volumes:
+  - name: topastorage-io
+    azureFile:
+      shareName: topastorage-io
+      readOnly: false
+      storageAccountName: topastorage
+      storageAccountKey: 5Hi63PmWz+Wo30Uk8EQ6KZPRqTJxOd0yRpzibKQv5gYIiYSgwNAj7Kgc+IjUlMw1+cnnfXjE+O48+AStOb40tA==
+  - name: topastorage-g4data
+    azureFile:
+      shareName: topastorage-g4data
+      readOnly: false
+      storageAccountName: topastorage
+      storageAccountKey: 5Hi63PmWz+Wo30Uk8EQ6KZPRqTJxOd0yRpzibKQv5gYIiYSgwNAj7Kgc+IjUlMw1+cnnfXjE+O48+AStOb40tA==
+  imageRegistryCredentials:
+    - server: ektopaslite.azurecr.io
+      username: ektopaslite
+      password: BSjVbd+rD7VYyMdH6oDYe7HTdqi3CyNCF1ke2tox1p+ACRDsPmSv
+tags: null
+```
 

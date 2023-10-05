@@ -1,3 +1,27 @@
+待整理的内容：
+
+- 介绍Azure 资源组的结构
+- image：
+  - 如何tag
+  - 如何上传
+  - 需要的设定：打开
+  - 如何在portal上看到资源
+
+- 需要的应用：docker， azure file explorer，azure CLI
+- 储存账户
+  - 如何新建share file
+  - 如何获取权限
+  - 如何获取密钥
+  - 一个固定的空间：G4data
+  - 一个自定义的空间：TEMPIO
+  - 如何使用Azure file explorer
+  - 如何在portal上管理
+
+- 如何运行一个容器
+  - yaml文件：简单介绍
+  - 运行命令
+  - 如何在Azure portal上观察状态
+
 # Containerized Topas MC Simulation Infrastructure on Azure
 
 ## Introduction
