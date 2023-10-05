@@ -21,14 +21,23 @@ RUN tar -zxvf /home/topas_3_9_debian9.tar.gz -C /home/
 # Create G4Data and IOTempDir folders in the /home directory
 RUN mkdir /home/G4Data /home/IOTempDir
 
-# Remove the /home/topas_3_9_debian9.tar.gz file
+# Remove the installation files
+RUN rm /home/topas_3_9_debian9.tar.gz.part*
+
 RUN rm /home/topas_3_9_debian9.tar.gz
+
+# Set the environment variable TOPAS_G4_DATA_DIR to /home/G4Data
+ENV TOPAS_G4_DATA_DIR=/home/G4Data
 
 # Set the working directory to /home/IOTempDir
 WORKDIR /home/IOTempDir
 
+# Set the entry point to /home/topas/bin/topas
+ENTRYPOINT ["/home/topas/bin/topas"]
+
+
 # If you want a lite version of image without the G4Data, please comment the commands below
-# Copy all .tar.gz files from the host to /home/G4Data in the container
+#Copy all .tar.gz files from the host to /home/G4Data in the container
 COPY G4Data/*.tar.gz /home/G4Data/
 
 # Extract all .tar.gz files in /home/G4Data and remove the original tar.gz files

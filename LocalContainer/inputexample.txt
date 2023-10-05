@@ -51,9 +51,9 @@ d:So/Example/BeamAngularCutoffX       = 90. deg
 d:So/Example/BeamAngularCutoffY       = 90. deg
 d:So/Example/BeamAngularSpreadX       = 0.0032 rad
 d:So/Example/BeamAngularSpreadY       = 0.0032 rad
-i:So/Example/NumberOfHistoriesInRun   = 1000000
+i:So/Example/NumberOfHistoriesInRun   = 100000
 
-i:Ts/ShowHistoryCountAtInterval = 100000
-i:Ts/NumberOfThreads = 8
+i:Ts/ShowHistoryCountAtInterval = 10000
+i:Ts/NumberOfThreads = 2
 
 #b:Ts/PauseBeforeQuit = "True"
