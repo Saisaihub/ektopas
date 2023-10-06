@@ -24,5 +24,5 @@ Feel free to reach out if you have any questions or need further assistance with
 
 ---
 
-**Note:** This project is maintained by Sai Ma, the LINAC physicist at Elekta, residing in Crawley, UK.
+**Note:** This project is maintained by Sai Ma
 
