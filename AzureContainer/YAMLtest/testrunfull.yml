@@ -1,0 +1,30 @@
+apiVersion: '2018-10-01'
+location: uksouth
+name: topasRuntime
+properties:
+  containers:
+  - name: mytopasrun
+    properties:
+      image: elektatopasregistry.azurecr.io/ektopasfull:3.9v1.0
+      resources:
+        requests:
+          cpu: 4
+          memoryInGB: 16
+      volumeMounts:
+        - name: topas-io
+          mountPath: /home/IOTempDir
+      command: ["/bin/sh", "-c", "/home/topas/bin/topas inputexample.txt"]
+  osType: Linux
+  restartPolicy: OnFailure
+  volumes:
+  - name: topas-io
+    azureFile:
+      shareName: topas-io
+      readOnly: false
+      storageAccountName: topasstorage
+      storageAccountKey: JKePvJnGE6PCd3KIi6XVSGL7dNSjX5tXP6ftjrXMzIZ9iG826nKEyXPAIeaAtAOeu+jL5mD17Y8W+ASts57xhA==
+  imageRegistryCredentials:
+    - server: elektatopasregistry.azurecr.io
+      username: elektatopasregistry
+      password: 0QKWvLEHji0vDYg8xHM7SCPMRqYMSZ7Eh8/+skV5q0+ACRCvHqoE
+tags: null

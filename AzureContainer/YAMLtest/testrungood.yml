@@ -5,7 +5,7 @@ properties:
   containers:
   - name: mytopasrun
     properties:
-      image: ektopasfull.azurecr.io/ektopasfull:latest
+      image: ektopaslite.azurecr.io/ektopaslite:latest
       resources:
         requests:
           cpu: 4
@@ -13,9 +13,11 @@ properties:
       volumeMounts:
         - name: topastorage-io
           mountPath: /home/IOTempDir
+        - name: topastorage-g4data
+          mountPath: /home/G4Data
       command: ["/bin/sh", "-c", "/home/topas/bin/topas inputexample.txt"]
   osType: Linux
-  restartPolicy: OnFailure
+  restartPolicy: Always
   volumes:
   - name: topastorage-io
     azureFile:
@@ -30,6 +32,9 @@ properties:
       storageAccountName: topastorage
       storageAccountKey: 5Hi63PmWz+Wo30Uk8EQ6KZPRqTJxOd0yRpzibKQv5gYIiYSgwNAj7Kgc+IjUlMw1+cnnfXjE+O48+AStOb40tA==
   imageRegistryCredentials:
+    - server: ektopaslite.azurecr.io
+      username: ektopaslite
+      password: BSjVbd+rD7VYyMdH6oDYe7HTdqi3CyNCF1ke2tox1p+ACRDsPmSv
     - server: ektopasfull.azurecr.io
       username: ektopasfull
       password: RRPa7bSCUvKZBUqbjKkxlB1ZO1K6pTrIZ7ucwebfOk+ACRAxVZg2

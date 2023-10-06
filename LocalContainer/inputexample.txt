@@ -54,6 +54,6 @@ d:So/Example/BeamAngularSpreadY       = 0.0032 rad
 i:So/Example/NumberOfHistoriesInRun   = 100000
 
 i:Ts/ShowHistoryCountAtInterval = 10000
-i:Ts/NumberOfThreads = 2
+i:Ts/NumberOfThreads = 4
 
 #b:Ts/PauseBeforeQuit = "True"

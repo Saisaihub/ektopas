@@ -30,21 +30,21 @@ Simplified Structure:
 
 > Name TBC `Azure Subscription`
 >
-> > **ektopas Resource Group** `resource group`  
+> > **ektopas-resource-group** `resource group`  
 > >
-> > > ***elekta-topas-registry*** `container registry`
+> > > ***elektatopasregistry*** `container registry`
 > > >
-> > > > elekta-topas-full `container image` :latest / :3.9v1.0 / ... `tags`
+> > > > ektopasfull `container image` :latest / :3.9v1.0 / ... `tags`
 > > > >
-> > > > elekta-topas-lite `container image` :latest / :3.9v1.0 / ... `tags`
+> > > > ektopasfull `container image` :latest / :3.9v1.0 / ... `tags` ~~dont use this on azure, the network is not fast and not free!~~
 > > >
-> > > ***elekta-topas-storage*** `storage account`
+> > > ***topasstorage*** `storage account`
 > > >
 > > > >topastorage-g4data `File share`
 > > > >
-> > > >topastorage-io `File share`
+> > > >topas-io `File share`
 > > >
-> > > *topasRuntime_[my project]* `container instance group`
+> > > *topasRuntime* `container instance group`
 > > >
 > > > > mytopasRun `container instance
 
