@@ -1,6 +1,53 @@
-待整理的内容：
+Current Structure on Azure:
 
-- 介绍Azure 资源组的结构
+> Name TBC `Azure Subscription`
+>
+> > **ektopasimage**  `resource group`  
+> >
+> > > *ektopasfull* `container registry`
+> > >
+> > > > ektopasfull:latest `container image`
+> > > >
+> > > > ektopasfull:topas3.9v1.0 `container image`
+> > >
+> > > *ektopaslite* `container registry`
+> >
+> > **ektopastorage **`resource group` 
+> >
+> > > *topastorage*  `storage account`
+> > >
+> > > > topastorage-g4data `File share`
+> > > >
+> > > > topastorage-io `File share`
+> >
+> > **ektopasrun **`resource group`  
+> >
+> > > *topasrungroup* `container instance group`
+> > >
+> > > > mytopasrun `container instance`
+
+Simplified Structure:
+
+> Name TBC `Azure Subscription`
+>
+> > **ektopas Resource Group** `resource group`  
+> >
+> > > ***elekta-topas-registry*** `container registry`
+> > >
+> > > > elekta-topas-full `container image` :latest / :3.9v1.0 / ... `tags`
+> > > >
+> > > > elekta-topas-lite `container image` :latest / :3.9v1.0 / ... `tags`
+> > >
+> > > ***elekta-topas-storage*** `storage account`
+> > >
+> > > >topastorage-g4data `File share`
+> > > >
+> > > >topastorage-io `File share`
+> > >
+> > > *topasRuntime_[my project]* `container instance group`
+> > >
+> > > > mytopasRun `container instance
+
 - image：
   - 如何tag
   - 如何上传
