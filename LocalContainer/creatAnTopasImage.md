@@ -75,7 +75,7 @@ Before you get started, ensure you have the following prerequisites in place:
 
    ### The structure will be like
 
-   ***note***: you can download and upzip [The templete folder](Your Simulation.7z).
+   ***note***: you can download and upzip this [Folder Templete](Your Simulation.7z).
    
    > `Your simulation`
    >
